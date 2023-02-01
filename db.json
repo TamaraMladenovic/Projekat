@@ -1,0 +1,17 @@
+{
+  "korisnik": [
+    {
+      "id": 1,
+      "username": "tamara",
+      "password": "1234",
+      "mail": "tamara@gmail.com"
+    }
+  ],
+  "smestaj": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}
