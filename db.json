@@ -5,13 +5,24 @@
       "username": "tamara",
       "password": "1234",
       "mail": "tamara@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "tanja",
+      "password": "tanja",
+      "mail": "tanja@gmail.com"
     }
   ],
   "smestaj": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "naziv": "Dizalica",
+      "grad": "Amsterdam",
+      "adresa": "Ulica 1",
+      "cena": "700",
+      "slika": "img",
+      "korisnik": 1,
+      "opis": "Apartman na vrhu dizalice"
     }
   ]
 }

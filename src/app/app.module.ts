@@ -7,12 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { PonudaComponent } from './components/ponuda/ponuda.component';
+import { RegistracijaComponent } from './components/registracija/registracija.component';
+import { KorisnikoviSmestajeviComponent } from './components/korisnikovi-smestaji/korisnikovi-smestaji.component';
+import { EditComponent } from './components/korisnikovi-smestaji/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PonudaComponent
+    PonudaComponent,
+    RegistracijaComponent,
+    KorisnikoviSmestajeviComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

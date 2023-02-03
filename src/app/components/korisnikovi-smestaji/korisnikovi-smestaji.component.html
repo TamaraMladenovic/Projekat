@@ -1,0 +1,76 @@
+<button (click)="clickDodajSmestaj()" class="btn btn-success" type="button" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">Dodaj smestaj</button>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Naziv</th>
+            <th scope="col">Grad</th>
+            <th scope="col">Adresa</th>
+            <th scope="col">Cena</th>
+            <th scope="col">Opis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of smestajData">
+            <td>{{row.id}}</td>
+            <td>{{row.naziv}}</td>
+            <td>{{row.grad}}</td>
+            <td>{{row.adresa}}</td>
+            <td>{{row.cena}}</td>
+            <td>{{row.opis}}</td>
+            <td>
+                <button [routerLink]="['/editovanje/'+row.id]" class="btn btn-info" type="button">Edit</button>
+                <button (click)="deleteSmestaj(row)" class="btn btn-danger mx-3">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detalji o smestaju</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="formValue" (ngSubmit)="postDetaljiSmestaja()">
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="naziv" class="form-label">Naziv</label>
+                        <input type="text" formControlName="naziv" class="form-control" id="naziv">
+                    </div>
+                    <div class="mb-3">
+                        <label for="grad" class="form-label">Grad</label>
+                        <input type="text" formControlName="grad" class="form-control" id="grad">
+                    </div>
+                    <div class="mb-3">
+                        <label for="adresa" class="form-label">Adresa</label>
+                        <input type="text" formControlName="adresa" class="form-control" id="adresa">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cena" class="form-label">Cena</label>
+                        <input type="text" formControlName="cena" class="form-control" id="cena">
+                    </div>
+                    <div class="mb-3">
+                        <label for="opis" class="form-label">Opis</label>
+                        <input type="text" formControlName="opis" class="form-control" id="opis">
+                    </div>
+                    <div class="mb-3">
+                        <label for="slika" class="form-label">Slika</label>
+                        <input type="text" formControlName="slika" class="form-control" id="slika">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                    <button type="submit" *ngIf="showAdd" 
+                        class="btn btn-primary">Dodaj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

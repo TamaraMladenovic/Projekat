@@ -24,6 +24,7 @@ export class AutentifikacijaService implements CanActivate {
   login(korisnik: Korisnik) {
     this.korisnik = korisnik;
     this.isLoggedIn = true;
+    this.router.navigate(['/edit']);
 
   }
 

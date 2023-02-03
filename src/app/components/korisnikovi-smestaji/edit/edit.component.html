@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="login">
+            <div class="login_box">
+                <div class="left">
+                 
+                    <div class="contact">
+                        <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+                            <h3>Edit product</h3>
+                            <input  formControlName="quickFix" type="hidden" placeholder="Grad">
+                            <input  formControlName="grad" type="text" placeholder="Grad">
+                            <input  formControlName="naziv" type="text" placeholder="Naziv">
+                            <input  formControlName="adresa" type="text" placeholder="Adresa">
+                            <input  formControlName="cena" type="text" placeholder="Cena">
+                            <input  formControlName="opis" type="text" placeholder="Opis">
+                            <input  formControlName="slika" type="text" placeholder="Slika">
+                            
+                            
+                            <button class="submit">Promeni</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </body>
