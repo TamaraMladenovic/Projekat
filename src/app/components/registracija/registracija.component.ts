@@ -45,7 +45,7 @@ export class RegistracijaComponent implements OnInit {
         Validators.required, Validators.minLength(4)
       ]),
       mail: new FormControl('', [
-        Validators.required, Validators.pattern(this.regex)
+        Validators.required, Validators.email
       ])
     });
   }

@@ -1,28 +1,75 @@
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    </head>
-    <body>
-        <section class="login">
-            <div class="login_box">
-                <div class="left">
-                 
-                    <div class="contact">
-                        <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
-                            <h3>Edit product</h3>
-                            <input  formControlName="quickFix" type="hidden" placeholder="Grad">
-                            <input  formControlName="grad" type="text" placeholder="Grad">
-                            <input  formControlName="naziv" type="text" placeholder="Naziv">
-                            <input  formControlName="adresa" type="text" placeholder="Adresa">
-                            <input  formControlName="cena" type="text" placeholder="Cena">
-                            <input  formControlName="opis" type="text" placeholder="Opis">
-                            <input  formControlName="slika" type="text" placeholder="Slika">
-                            
-                            
-                            <button class="submit">Promeni</button>
-                        </form>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <app-nav-bar></app-nav-bar><br>
+
+    <section class="section">
+        <div class="div1">
+            <div class="div2">
+                <h2>Izmenite smestaj</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+                    <div class="div3">
+                        <input class="input" formControlName="quickFix" type="hidden" placeholder="Grad">
                     </div>
+                    <div class="div3">
+                        <input class="input" formControlName="grad" type="text" placeholder="Grad">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="naziv" type="text" placeholder="Naziv">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="adresa" type="text" placeholder="Adresa">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="cena" type="text" placeholder="Cena">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="opis" type="text" placeholder="Opis">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="slika" type="text" placeholder="Slika">
+                    </div>
+                    <div class="div3">
+                        <input class="input" type="submit" value="Promeni" name="posalji">
+                    </div>
+                </form>
+                <div class="div4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6788.973894508376!2d20.415886424992127!3d44.742536581983714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc6077e6b5bf2e3c9!2z0J7RgdC90L7QstC90LAg0YjQutC-0LvQsCDigJ7QkdGA0LDQvdC60L4g0IvQvtC_0LjRm-KAnA!5e0!3m2!1ssr!2srs!4v1610060481147!5m2!1ssr!2srs"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
-        </section>
-    
-    </body>
+        </div>
+    </section>
+    <!--
+    <section class="login">
+        <div class="login_box">
+            <div class="left">
+
+                <div class="contact">
+                    <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+                        <h3>Edit product</h3>
+                        <input formControlName="quickFix" type="hidden" placeholder="Grad">
+                        <input formControlName="grad" type="text" placeholder="Grad">
+                        <input formControlName="naziv" type="text" placeholder="Naziv">
+                        <input formControlName="adresa" type="text" placeholder="Adresa">
+                        <input formControlName="cena" type="text" placeholder="Cena">
+                        <input formControlName="opis" type="text" placeholder="Opis">
+                        <input formControlName="slika" type="text" placeholder="Slika">
+
+
+                        <button class="submit">Promeni</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <img src="{{smestaj.slika}}" alt="">
+            </div>
+        </div>
+    </section>-->
+
+</body>

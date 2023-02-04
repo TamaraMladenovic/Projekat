@@ -71,6 +71,16 @@ export class SmestajService {
     );
   }
 
+  public getByNotUserId(userId: number): Observable<Smestaj[]> {
+    return this._httpClient.get<Smestaj[]>(`${this.json_locatio}`).pipe(
+      map((products: Smestaj[]) => {
+        return products.filter(product => product.korisnik != userId);
+      }),
+      map(items => items.map(item =>
+        this._createSmestajFromObject(item)))
+    );
+  }
+
   public updateSmestaj(smestaj: Smestaj): Observable<Smestaj> {
     return this._httpClient.put(this.json_locatio + "/" + smestaj.id, smestaj).pipe(
       map((data: any) => this._createSmestajFromObject(data))

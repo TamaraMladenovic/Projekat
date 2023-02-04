@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<br>
+<h4 class="text-center text-secondary mt-5">Lista Omiljenih Smestaja</h4>
+<br>
+<div class="container mt-5 mb-5">
+  <div class="d-flex justify-content-center row">
+      <div class="col-md-10" *ngFor="let smestaj of (omiljenoUnosi$ | async)">
+          <div class="row p-2 bg-white border rounded" style="box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.1);">
+              <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                      src="{{smestaj.slika}}"></div>
+              <div class="col-md-6 mt-1">
+                  <h5>{{smestaj.naziv}}</h5>
+                  <div class="d-flex flex-row">
+                      <span>{{smestaj.grad}}, {{smestaj.adresa}}</span>
+                  </div>
+                  <br>
+                  <div class="postcard__preview-txt" align="justify">{{smestaj.opis}}</div>
+              </div>
+              <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                  <div class="d-flex flex-row align-items-center">
+                    <button (click)="izbrisiOmiljeno(smestaj)" class="btn btn-outline-primary btn-sm mt-2" type="button">Remove from wishlist</button>
+                  </div>
+              </div>
+          </div><br>
+      </div>
+  </div>
+</div>

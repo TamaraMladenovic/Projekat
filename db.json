@@ -11,18 +11,44 @@
       "username": "tanja",
       "password": "tanja",
       "mail": "tanja@gmail.com"
+    },
+    {
+      "id": 3,
+      "username": "Neko",
+      "password": "neko",
+      "mail": "neko@gmail.com"
     }
   ],
   "smestaj": [
     {
       "id": 1,
-      "naziv": "Dizalica",
+      "naziv": "Mystique apartman na vrhu dizalice",
       "grad": "Amsterdam",
       "adresa": "Ulica 1",
       "cena": "700",
-      "slika": "img",
+      "slika": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-50884955/original/e480eed6-49fb-4b1e-b8cd-d4d82fc16b0d.jpeg?im_w=1200",
+      "korisnik": 2,
+      "opis": "Mystique apartman je 45 metara iznad dizalice. Apartman Mystique ima dva nivoa, ne manje od 38 kvadratnih metara. Tako da je prostrano ako želiš da te očekuju. Vrhunska, raskošna i lepo uređena i opremljena svim sadržajima."
+    },
+    {
+      "id": 2,
+      "naziv": "Apartman Hedonist",
+      "grad": "Beograd",
+      "adresa": "Zemun 1",
+      "cena": "650",
+      "slika": "https://noviapartmani.com/public/upload/apartments/2017/01/beograd-zemun-apartman-hedonist-19-931_gallery_thumb.jpg",
+      "korisnik": 2,
+      "opis": "Apartman Hedonist je veoma luksuzan apartman od 95m2 u Zemunu. Ima jakuzzi, saunu, parno kupatilo, aroma tuš, bazen, 2 parking mesta. Iako ima skoro 100m2 predvidjen je da u njemu spava samo 2 osobe jer ima samo jedan veliki krevet, dok u samom apartmanu tokom dnevnih varijanti mogu boraviti 4 osobe."
+    },
+    {
+      "id": 3,
+      "naziv": "Apartman Barsa",
+      "grad": "Barcelona",
+      "adresa": "Spanija 1",
+      "cena": "650",
+      "slika": "https://www.renttopapartments.com/pictures/barcelona-centro.jpg",
       "korisnik": 1,
-      "opis": "Apartman na vrhu dizalice"
+      "opis": "The apartment is very cozy with designer furniture and quality finishes. It is a one bedroom attic with a double sofa-bed in the living room so it can accommodate up to 4 guests. It has one complete bathroom with shower, a fully equipped kitchen and a beautiful terrace overlooking the city."
     }
   ]
 }

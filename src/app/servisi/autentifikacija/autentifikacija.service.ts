@@ -15,7 +15,7 @@ export class AutentifikacijaService implements CanActivate {
   constructor(private router: Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     if (!this.isLoggedIn) {
-      return this.router.navigate(['/login']);
+      return this.router.navigate(['/']);
     } else {
       return true;
     }
@@ -24,7 +24,7 @@ export class AutentifikacijaService implements CanActivate {
   login(korisnik: Korisnik) {
     this.korisnik = korisnik;
     this.isLoggedIn = true;
-    this.router.navigate(['/edit']);
+    this.router.navigate(['/ponuda']);
 
   }
 
@@ -35,6 +35,6 @@ export class AutentifikacijaService implements CanActivate {
       password: "",
       mail: ""
     });
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 }

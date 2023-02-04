@@ -10,6 +10,12 @@ import { PonudaComponent } from './components/ponuda/ponuda.component';
 import { RegistracijaComponent } from './components/registracija/registracija.component';
 import { KorisnikoviSmestajeviComponent } from './components/korisnikovi-smestaji/korisnikovi-smestaji.component';
 import { EditComponent } from './components/korisnikovi-smestaji/edit/edit.component';
+import { PretragaPipe } from './filter/pretraga.pipe';
+import { OmiljenoComponent } from './components/omiljeno/omiljeno.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { StoreModule } from '@ngrx/store';
+import { metaReducerLocalStorage, smestajReducer } from './state/smestaj.reducer';
+import { DetaljiComponent } from './components/detalji/detalji.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +24,19 @@ import { EditComponent } from './components/korisnikovi-smestaji/edit/edit.compo
     PonudaComponent,
     RegistracijaComponent,
     KorisnikoviSmestajeviComponent,
-    EditComponent
+    EditComponent,
+    PretragaPipe,
+    OmiljenoComponent,
+    NavBarComponent,
+    DetaljiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({omiljenoUnosi: smestajReducer}, {metaReducers: [metaReducerLocalStorage]})
   ],
   providers: [],
   bootstrap: [AppComponent]

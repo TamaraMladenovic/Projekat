@@ -1,0 +1,32 @@
+
+    <br>
+
+
+    <div class="container">
+        <button [routerLink]="['/ponuda']" class="btn btn-outline-secondary btn-large" type="button"  style="box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.1);">Nazad</button><br>
+        <!-- Portfolio Item Heading -->
+        <h1 class="my-4 special">{{smestaj.naziv}}</h1>
+        <h2>{{smestaj.grad}}, {{smestaj.adresa}}
+
+        </h2>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="img-fluid" style="width: 500px; height: 400px;" src="{{smestaj.slika}}" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3 special">Opis</h3>
+                <p>{{smestaj.opis}}</p>
+                <h3 class="my-3 special">Cena i kontakt</h3>
+                <ul>
+                    <li style="font-size: 20px;">{{smestaj.cena}}$</li>
+                    <li style="font-size: 20px;">Korisnik: {{korisnik.username}}</li>
+                    <li style="font-size: 20px;">Mail: {{korisnik.mail}}</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>

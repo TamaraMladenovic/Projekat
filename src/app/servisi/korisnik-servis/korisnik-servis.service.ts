@@ -53,7 +53,13 @@ export class KorisnikService {
       }
     );
 
-    this.routes.navigate(['/ponuda']);
+    this.routes.navigate(['/']);
+  }
+
+  public getUser(id: Number): Observable<Korisnik> {
+    return this._httpClient.get<Korisnik>(this.json_location + "/" + id).pipe(
+      map((data: Korisnik) => this._createUserFromObject(data))
+    );
   }
 
 
